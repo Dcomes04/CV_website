@@ -20,14 +20,14 @@ function showProject(projectId) {
 
   document.getElementById(projectId).style.display = 'block';
 
-  var fletxaEsquerra = document.querySelector('.arrow.Left');
-  var fletxaDreta = document.querySelector('.arrow.Right');
+  var leftArrow = document.querySelector('.arrow.Left');
+  var rightArrow = document.querySelector('.arrow.Right');
 
   if (projectId === 'conclave') {
-    fletxaEsquerra.classList.add('grey');
-    fletxaDreta.classList.remove('grey');
+    leftArrow.classList.add('grey');
+    rightArrow.classList.remove('grey');
   } else if (projectId === 'bewater') {
-    fletxaEsquerra.classList.remove('grey');
-    fletxaDreta.classList.add('grey');
+    leftArrow.classList.remove('grey');
+    rightArrow.classList.add('grey');
   }
 }
