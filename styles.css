@@ -1,0 +1,544 @@
+:root {
+  --font-family-inter: 'Inter', sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+}
+
+.container {
+  display: flex;
+  flex-direction: center;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  width: 100%;
+  padding: 20px;
+  position: relative;
+}
+
+.image-container {
+  position: relative;
+  display: inline-block;
+}
+
+.image-container img {
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+}
+
+.image-container:hover img {
+  transform: scale(1.1);
+  opacity: 0;
+}
+
+.image-container.conclave::before, .image-container.BeWater::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('github.png');
+  background-size: cover;
+  background-position: center;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+  transform: scale(1);
+}
+
+.image-container.conclave:hover::before, .image-container.BeWater:hover::before {
+  opacity: 1;
+  transform: scale(1.1);
+}
+
+p, h1, h2 {
+  cursor: default;
+}
+
+.icon, .text.text.menu-item {
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out;
+}
+
+.icon:hover {
+  transform: scale(1.1);
+}
+
+.text.menu-item:hover {
+  transform: scale(1.1);
+  color: rgba(42, 77, 125, 1);
+}
+
+.circle{
+  position: absolute;
+  left: 170px;
+  width: 54px; 
+  height: 54px; 
+  background-color: rgba(42, 77, 125, 1);
+  border-radius: 50%;
+}
+
+.circle.c1 {
+  top: 552px;
+}
+
+.circle.c2 {
+  top: 629px;
+}
+
+.circle.c3 {
+  top: 706px;
+}
+
+.icon {
+  position: absolute;
+  height: auto;
+}
+
+.icon.phone {
+  left: 182px;
+  top: 563px;
+  width: 29px;
+}
+
+.icon.gmail {
+  left: 181px;
+  top: 640px;
+  width: 31px;
+}
+
+.icon.insta {
+  left: 174px;
+  top: 718px;
+  width: 45px;
+}
+
+.rectangle1 {
+  position: absolute;
+  left: 123px;
+  top: 76px;
+  width: 415px;
+  height: 823px;
+  background-color: rgba(224, 228, 236, 1);
+  border-radius: 440px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.rectangle {
+  position: absolute;
+  left: 0px;
+  width: 100%;
+  height: 752px;
+}
+
+.rectangle.personal-info {
+  top: 1087px;
+  background-color: rgba(224, 228, 236, 1);
+}
+
+.rectangle.work-experience {
+  top: 1839px;
+  background-color: rgba(42, 77, 125, 1);
+}
+
+.rectangle.academic-data {
+  top: 2591px;
+  background-color: rgba(224, 228, 236, 1);
+}
+
+.rectangle.habilities {
+  top: 3343px;
+  background-color: rgba(42, 77, 125, 1);
+}
+
+.rectangle.languages {
+  top: 4095px;
+  background-color: rgba(224, 228, 236, 1);
+}
+
+.rectangle.projects {
+  top: 4827px;
+  background-color: rgba(42, 77, 125, 1);
+}
+
+.text {
+  position: absolute;
+  font-family: var(--font-family-inter);
+}
+
+.text.primary-title {
+  top: 154px;
+  left: 583px;
+  width: 621px;
+  height: 73px;
+  font-size: 60px;
+  font-weight: bold;
+  text-align: left;
+  color: rgba(42, 77, 125, 1);
+}
+
+.text.secondary-title {
+  top: 240px;
+  left: 583px;
+  width: calc(100% - 621px);
+  max-width: 621px;
+  height: auto;
+  font-size: 30px;
+  font-weight: normal;
+  text-align: left;
+  color: rgba(42, 77, 125, 1);
+  white-space: normal;
+}
+
+.text.contact-title {
+  left: 175px;
+  top: 485px;
+  width: 344px;
+  height: 44px;
+  font-size: 40px;
+  font-weight: bold;
+  text-align: left;
+  color: rgba(0, 0, 0, 1);
+}
+
+.text.contact {
+  left: 230px;
+  width: 283px;
+  height: 26px;
+  font-size: 20px;
+  font-weight: normal;
+  text-align: left;
+  color: rgba(0, 0, 0, 1);
+}
+
+.text.contact.phone {
+  top: 565px;
+}
+
+.text.contact.gmail {
+  top: 639px;
+}
+
+.text.contact.insta {
+  top: 718px;
+}
+
+.text.menu-item {
+  left: 583px;
+  width: 450px;
+  height: 47px;
+  font-size: 30px;
+  font-weight: bold;
+  text-align: center;
+  color: rgba(0, 0, 0, 1);
+}
+
+#personal-info.text.menu-item {
+  top: 377px;
+}
+
+#work-experience.text.menu-item {
+  top: 471px;
+  }
+
+#academic-data.text.menu-item {
+  top: 565px;
+}
+
+#habilities.text.menu-item {
+  top: 659px;
+}
+
+#languages.text.menu-item {
+  top: 753px;
+}
+
+#projects.text.menu-item {
+  top: 847px;
+}
+
+@media (min-width: 1240px) {
+  .text.primary-title, .text.secondary-title, .text.menu-item {
+    left: 48%;
+  }
+}
+
+@media (max-width: 1240px) {
+  .text.primary-title, .text.secondary-title, .text.menu-item {
+    left: 583px;
+  }
+}
+
+.text.section-title {
+  margin-top: 20px;
+  width: 40%;
+  height: auto;
+  font-size: 40px;
+  font-weight: bold;
+}
+
+.text.section-content {
+  width: 40%;
+  height: auto;
+  font-size: 30px;
+  font-weight: normal;
+}
+
+#personal-info-section.text.section-title {
+  left: 123px;
+  top: 1090px;
+  text-align: left;
+  color: rgba(0, 0, 0, 1);
+}
+
+#personal-info-section.text.section-content {
+  left: 123px;
+  top: 1218px;
+  text-align: left;
+  color: rgba(0, 0, 0, 1);
+}
+
+#work-experience-section.text.section-title {
+  right: 123px;
+  top: 1837px;
+  text-align: right;
+  color: rgba(255, 255, 255, 1);
+}
+
+#work-experience-section.text.section-content {
+  right: 123px;
+  top: 1967px;
+  text-align: right;
+  color: rgba(255, 255, 255, 1);
+}
+
+#academic-data-section.text.section-title {
+  left: 123px;
+  top: 2596px;
+  text-align: left;
+  color: rgba(0, 0, 0, 1);
+}
+
+#academic-data-section.text.section-content {
+  left: 123px;
+  top: 2724px;
+  width: 57%;
+  text-align: left;
+  color: rgba(0, 0, 0, 1);
+}
+
+#habilities-section.text.section-title {
+  right: 123px;
+  top: 3343px;
+  text-align: right;
+  color: rgba(255, 255, 255, 1);
+}
+
+#habilities-section.text.section-content {
+  right: 123px;
+  top: 3473px;
+  text-align: right;
+  color: rgba(255, 255, 255, 1);
+}
+
+#languages-section.text.section-title {
+  left: 123px;
+  top: 4100px;
+  text-align: left;
+  color: rgba(0, 0, 0, 1);
+}
+
+#languages-section.text.section-content {
+  left: 123px;
+  top: 4228px;
+  text-align: left;
+  color: rgba(0, 0, 0, 1);
+}
+
+#projects-section.text.section-title {
+  right: 123px;
+  top: 4847px;
+  text-align: right;
+  color: rgba(255, 255, 255, 1);
+}
+
+.pilota {
+  position: absolute;
+  left: 55%;
+  top: 1179px;
+  width: 14%;
+  height: auto;
+}
+
+.familia {
+  position: absolute;
+  left: 75%;
+  top: 1355px;
+  width: 14%;
+  height: auto;
+}
+
+.viatjar {
+  position: absolute;
+  left: 60%;
+  top: 1542px;
+  width: 14%;
+  height: auto;
+}
+
+.cientific {
+  position: absolute;
+  left: 8%;
+  top: 1834px;
+  width: 30%;
+  height: auto;
+}
+
+.gironafc {
+  position: absolute;
+  left: 22%;
+  top: 2249px;
+  width: 17%;
+  height: auto;
+}
+
+.proa {
+  position: absolute;
+  left: 74%;
+  top: 2724px;
+  width: 15%;
+  height: auto;
+}
+
+.DualDiploma {
+  position: absolute;
+  left: 30%;
+  top: 3098px;
+  width: 30%;
+  height: auto;
+}
+
+.udg {
+  position: absolute;
+  left: 70%;
+  top: 3089px;
+  width: 20%;
+  height: auto;
+}
+
+.memoria {
+  position: absolute;
+  left: 22%;
+  top: 3400px;
+  width: 15%;
+  height: auto;
+}
+
+.ordinador {
+  position: absolute;
+  left: 17%;
+  top: 3646px;
+  width: 27%;
+  height: auto;
+}
+
+.senyera {
+  position: absolute;
+  left: 60%;
+  top: 4200px;
+  width: 20%;
+  height: auto;
+}
+
+.espanya {
+  position: absolute;
+  left: 70%;
+  top: 4450px;
+  width: 20%;
+  height: auto;
+}
+
+.angles {
+  position: absolute;
+  left: 40%;
+  top: 4500px;
+  width: 20%;
+  height: auto;
+}
+
+.Dídac {
+  position: absolute;
+  left: 170px;
+  top: 131px;
+  width: 316px;
+  height: auto;
+  border-radius: 440px;
+}
+
+.projects {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.fletxa {
+  cursor: pointer;
+  width: 50px;
+  height: auto;
+  position: absolute;
+  top: 5150px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.fletxa:hover{
+  transform: scale(1.1);
+}
+
+.fletxa.Esquerra {
+  left: 12.5%;
+}
+
+.fletxa.Dreta {
+  right: 10%;
+}
+
+.fletxa.fosca{
+  opacity: 0.5;
+  transform: scale(1);
+  cursor: default;
+}
+
+.project {
+  display: none;
+  position: absolute;
+  top: 5050px;
+}
+
+.project.active {
+  display: block; 
+}
+
+.project img {
+  width: 100%;
+  height: auto;
+}
+
+.wireframe-1 {
+  width: 100%;
+  background-color: #ffffff;
+  padding: 20px;
+}
