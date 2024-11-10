@@ -35,3 +35,6 @@ The **layout** has a lot of space between sections to help each one stand out an
 
 ### Link to Figma Project
 [Figma Project Link](https://www.figma.com/design/LBt7P8DPYtcpEpPMRzCXG2/Untitled?node-id=0-1&t=WAilkHsLWnVqosQK-1)
+
+### Public Link to Website
+[GitHub Pages Link](https://dcomes04.github.io/CV_website/)
